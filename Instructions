@@ -1,0 +1,23 @@
+We have created a main.scss and linked it to the main.css files in the dist folder.
+Future css code will be writte on the scss file and automatically saves itself in the main.css file.
+for this we have installed the npm module by;
+
+initialize it by "npm init"
+
+enter the questions and answers
+
+a package.json will be installed. open it and navigate the script command line.
+Under it type this command;
+"sass": "node-sass -w scss -o dist/css --recursive"
+
+in the terminal click "npm i node-sass"
+
+this will download the npm module via the terminal.
+
+
+this helps all the scss that we will write to go be wriiten in a main.css folder
+
+use "npm run sass" to run the sass
+
+create a .gitignore and add node-modules there so as not to commit the node modules folder to git
+

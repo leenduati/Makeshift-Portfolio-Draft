@@ -1,0 +1,32 @@
+//this keyframe will help as include an animation for our name
+@keyframes nameFlowChange {
+    //at 50%
+    from {
+        width: 100%;
+        left: 0;
+    }
+    to {
+        width: 0;
+        left: 100%;
+    }
+}
+
+//this keyframe will change the colour of the text
+@keyframes textReveal {
+    from {
+        color: transparent;
+    }
+    to {
+        color: white;
+    }
+}
+
+//this keyframe will change the colour of the name of the user from white to crimson
+@keyframes userNameChange {
+    from {
+        color: white;
+    }
+    to {
+        color: crimson;
+    }
+}

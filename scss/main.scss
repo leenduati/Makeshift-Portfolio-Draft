@@ -1,3 +1,108 @@
+@import "config";
+$primary_color: rgb(97, 17, 97);
+$text-color: white;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+//the asterisk above selects the whole body. it removes the margin, opadding and initializes a box-sizing display
+html {
+    font-size: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+a {
+    text-decoration: none; //removes preset styling of an anchor tag
+    color: $text-color;
+    //this removes the decoration in the anchor tag
+}
+
 body {
-    background-color: blue;
+    .container {
+        //the code below centers a div in the centre of the page
+        min-height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        align-items: center;
+        justify-content: center;
+        h1 {
+            color: transparent;
+            display: block;
+            width: fit-content;
+            position: relative;
+            font-size: 4rem;
+            animation: textReveal 2s ease-in-out forwards; //this makes it stay like that going forward
+            &:nth-child(1) {
+                animation-delay: 1s;
+            } //this is useful in showing the animation delay in stages
+            &:nth-child(2) {
+                animation-delay: 2s;
+            }
+            &:nth-child(3) {
+                animation: userNameChange 1s ease-in forwards;
+                animation-delay: 3s;
+            }
+            span {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 0%;
+                background-color: crimson;
+                animation: nameFlowChange 3s ease-in-out;
+                animation-delay: 1s;
+                #name {
+                    color: crimson;
+                }
+            }
+        }
+        //this styles the button. we have included a transition property at the end to change background & colour on hover
+        .cta {
+            display: inline-block;
+            padding: 10px 30px;
+            color: white;
+            background-color: transparent;
+            border: 2px solid crimson;
+            font-size: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 1rem; //space between letters
+            margin-top: 30px;
+            transition: 1s ease-in-out; //the time is 5s
+            transition-property: background-color, color;
+            &:hover {
+                color: white;
+                background-color: maroon;
+            }
+        }
+    }
+    //hello world section start style
+    #hello {
+        background-image: url("../Images/background2.jpg");
+        background-size: cover;
+        position: relative;
+        background-position: top center;
+        z-index: 4;
+        //create an overlay; this is done by creating an after pseudo element.
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            background-color: black;
+            opacity: 0.89;
+            z-index: -4;
+        }
+        .hello {
+            max-width: 1200px;
+            padding: 0px 50px;
+            margin: 0 auto;
+            justify-content: flex-start;
+        } //this uts the class element on the left
+        //hello world section end style
+    }
 }
