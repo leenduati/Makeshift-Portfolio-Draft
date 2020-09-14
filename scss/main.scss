@@ -18,9 +18,32 @@ a {
     text-decoration: none; //removes preset styling of an anchor tag
     color: $text-color;
     //this removes the decoration in the anchor tag
+    cursor: pointer;
 }
 
 body {
+    .title {
+        //this is the services title
+        font-size: 4rem;
+        font-weight: 300;
+        color: setTextColour($text-color);
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        letter-spacing: .2rem;
+        text-align: center;
+        position: relative;
+        span {
+            //same span that we used in the intro
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 0%;
+            background-color: crimson;
+            animation: nameFlowChange 3s ease-in-out;
+            animation-delay: 1s;
+        }
+    }
     img {
         height: 100%;
         width: 100%;
@@ -68,7 +91,8 @@ body {
             top: 0;
             height: 100%;
             width: 100%;
-            background-color: black;
+            background-color: rgb(2, 13, 15);
+            ;
             opacity: 0.89;
             z-index: -4;
         }
@@ -114,100 +138,147 @@ body {
                 }
             }
         }
-        //hello world section end style 
-        //services section
-        #services {
-            padding: 100px 0; //create space between top and bottom sections
-            .service {
-                flex-direction: column;
-                //flex-direction puts the tems in the flex container as a column
-                text-align: center;
-                max-width: 1500px;
-                margin: 0 auto;
-                padding: 10px 0;
-                .title {
-                    //this is the services title
-                    font-size: 4rem;
-                    font-weight: 300;
-                    color: setTextColour($text-color);
-                    margin-bottom: 10px;
-                    text-transform: uppercase;
-                    letter-spacing: .2rem;
-                    text-align: center;
-                    position: relative;
-                    span {
-                        //same span that we used in the intro
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        height: 100%;
-                        width: 0%;
-                        background-color: crimson;
-                        animation: nameFlowChange 3s ease-in-out;
-                        animation-delay: 1s;
-                    }
-                }
-                &.top {
-                    font-size: 1.4rem;
-                    margin-top: 2rem;
-                    font-weight: 300;
-                    letter-spacing: 0.05rem;
-                }
-                &.bottom {
+    }
+    //hello world section end style 
+    //services section
+    #services {
+        padding-top: 100px; //create space between top and bottom sections
+        .service {
+            flex-direction: column;
+            //flex-direction puts the tems in the flex container as a column
+            text-align: center;
+            max-width: 1500px;
+            margin: 0 auto;
+            padding: 10px 0;
+            &.top {
+                font-size: 1.4rem;
+                margin-top: 2rem;
+                font-weight: 300;
+                letter-spacing: 0.05rem;
+            }
+            &.bottom {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+                .service-item {
+                    flex-basis: 80%;
+                    //The flex-basis CSS property sets the initial main size of a flex item. It sets the size of the content box unless otherwise set with box-sizing .
                     display: flex;
-                    align-items: center;
+                    align-items: flex-start;
                     justify-content: center;
-                    flex-wrap: wrap;
-                    .service-item {
-                        flex-basis: 80%;
-                        //The flex-basis CSS property sets the initial main size of a flex item. It sets the size of the content box unless otherwise set with box-sizing .
-                        display: flex;
-                        align-items: flex-start;
-                        justify-content: center;
-                        flex-direction: column;
-                        //the items will be displayed as columns
-                        padding: 30px;
-                        border-radius: 10px;
-                        background-image: url("../Images/background.jpg");
-                        background-size: cover;
-                        margin: 10px 5%;
-                        position: relative;
-                        z-index: 4;
-                        overflow: hidden;
-                        //The overflow property specifies whether to clip the content or to add scrollbars when the content of an element is too big to fit in the specified area.
-                        //create an overlay; this is done by creating an after pseudo element.
-                        &::after {
-                            content: "";
-                            position: absolute;
-                            height: 100%;
-                            width: 100%;
-                            background-color: black;
-                            ;
-                            left: 0%;
-                            opacity: 0.89;
-                            z-index: -4;
-                        }
-                        .icon {
-                            height: 50px;
-                            width: 50px;
-                            object-fit: cover;
-                        }
-                        h2 {
-                            color: white;
-                            margin-bottom: 10px;
-                            padding-bottom: 5px;
-                            text-transform: uppercase;
-                        }
-                        p {
-                            color: white;
-                            text-align: left;
-                            font-size: 1.4rem;
-                            line-height: 1.9rem;
-                        }
+                    flex-direction: column;
+                    //the items will be displayed as columns
+                    padding: 30px;
+                    border-radius: 10px;
+                    background-image: url("../Images/background.jpg");
+                    background-size: cover;
+                    margin: 10px 5%;
+                    position: relative;
+                    z-index: 4;
+                    overflow: hidden;
+                    //The overflow property specifies whether to clip the content or to add scrollbars when the content of an element is too big to fit in the specified area.
+                    //create an overlay; this is done by creating an after pseudo element.
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        height: 100%;
+                        width: 100%;
+                        background-color: rgb(22, 36, 39);
+                        ;
+                        left: 0%;
+                        opacity: 0.89;
+                        z-index: -4;
+                    }
+                    .icon {
+                        height: 50px;
+                        width: 50px;
+                        object-fit: cover;
+                    }
+                    h2 {
+                        color: white;
+                        margin-bottom: 10px;
+                        padding-bottom: 5px;
+                        text-transform: uppercase;
+                    }
+                    p {
+                        color: white;
+                        text-align: left;
+                        font-size: 1.4rem;
+                        line-height: 1.9rem;
                     }
                 }
             }
         }
-        //end of services section
+    }
+    //end of services section
+    //Start of projects section
+    #projects {
+        padding-top: 100px;
+        .projects {
+            flex-direction: column;
+            //flex-direction puts the tems in the flex container as a column
+            text-align: left; //text will be aligned left
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 10px 0
+        }
+        .all-projects {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            .project-items {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                width: 80%;
+                margin: 20px auto;
+                overflow: hidden;
+                border-radius: 10px;
+                .project-image {
+                    flex-basis: 50%;
+                    overflow: hidden;
+                    height: 300px;
+                    position: relative;
+                    //this creates an overlay
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        height: 100%;
+                        width: 100%;
+                        background-color: black;
+                        opacity: 0.75;
+                    }
+                    //upon hovering with a mouse the image will change according to the animation below
+                    &:hover {
+                        animation: hoverImage 1s ease-in-out;
+                    }
+                }
+                .project-info {
+                    padding: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    flex-basis: 50%;
+                    height: 100%;
+                    background-color: rgb(22, 36, 39);
+                    color: white;
+                    align-items: flex-start;
+                    justify-content: center;
+                    h1 {
+                        font-size: 4rem;
+                        font-weight: 500;
+                    }
+                    h2 {
+                        font-size: 1rem;
+                        font-weight: 500;
+                        margin: 10px 0;
+                    }
+                }
+            }
+        }
+        //end of projects section
     }
 }

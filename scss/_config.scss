@@ -42,3 +42,12 @@
 }
 
 // the function above changes the color when background color's lightness is greater than 40
+//the keyframe animation below will change the value from a scale of 1 to 1.1 in the x and y direction
+@keyframes hoverImage {
+    from {
+        transform: scale(1, 1);
+    }
+    to {
+        transform: scale(1.1, 1.1);
+    }
+}
