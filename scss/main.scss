@@ -26,7 +26,8 @@ body {
         //this is the services title
         font-size: 4rem;
         font-weight: 300;
-        color: setTextColour($text-color);
+        color: rgb(2, 13, 15);
+        ;
         margin-bottom: 10px;
         text-transform: uppercase;
         letter-spacing: .2rem;
@@ -47,6 +48,11 @@ body {
     img {
         height: 100%;
         width: 100%;
+        object-fit: cover;
+    }
+    .icon {
+        height: 50px;
+        width: 50px;
         object-fit: cover;
     }
     .container {
@@ -190,11 +196,6 @@ body {
                         opacity: 0.89;
                         z-index: -4;
                     }
-                    .icon {
-                        height: 50px;
-                        width: 50px;
-                        object-fit: cover;
-                    }
                     h2 {
                         color: white;
                         margin-bottom: 10px;
@@ -300,6 +301,9 @@ body {
                         height: 300px;
                         object-fit: cover;
                         border-radius: 10px;
+                        &:hover {
+                            animation: hoverImage 1s ease-out forwards;
+                        }
                     }
                     //we create a pseudo element to put in a border just systematically placed around the image
                     &::after {
@@ -325,6 +329,10 @@ body {
                 }
                 p {
                     margin-bottom: 10px;
+                    color: black;
+                    text-align: left;
+                    font-size: 1.4rem;
+                    line-height: 1.9rem;
                 }
             }
             .cta {
@@ -333,4 +341,38 @@ body {
         }
     }
     //end of about section
+    //start of contact section
+    .contact {
+        flex-direction: column; //the flex direction will be a column
+        padding: 100px 0;
+        .contact-items {
+            max-width: 1200px; //this is the max-width
+            .contact-item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 5px 10px rgb(22, 36, 39);
+                border-radius: 10px;
+                margin-bottom: 20px;
+                padding: 10px;
+                width: 50vh;
+                text-align: center;
+                h1 {
+                    font-size: 4rem;
+                    font-weight: 500;
+                }
+                h2 {
+                    font-size: 2rem;
+                    font-weight: 500;
+                    margin: 10px 0;
+                }
+                &:hover {
+                    animation: hoverImage 1s ease-in-out forwards;
+                    background-color: lightpink; //added a hover animation effect on the contact boxes
+                }
+            }
+        }
+    }
+    //end of contact section
 }
