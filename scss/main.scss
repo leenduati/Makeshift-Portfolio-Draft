@@ -11,7 +11,7 @@ $text-color: white;
 //the asterisk above selects the whole body. it removes the margin, opadding and initializes a box-sizing display
 html {
     font-size: 10px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 a {
@@ -272,7 +272,7 @@ body {
                         font-weight: 500;
                     }
                     h2 {
-                        font-size: 1rem;
+                        font-size: 2rem;
                         font-weight: 500;
                         margin: 10px 0;
                     }
@@ -281,4 +281,56 @@ body {
         }
         //end of projects section
     }
+    //start of about section
+    #about {
+        .about {
+            flex-direction: column-reverse; //this reverses the order of the columns starting with the col-right
+            text-align: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 100px 20px;
+            .col-left {
+                width: 250px;
+                height: 300px;
+                padding-top: 30px;
+                .potrait {
+                    position: relative;
+                    img {
+                        width: 100%;
+                        height: 300px;
+                        object-fit: cover;
+                        border-radius: 10px;
+                    }
+                    //we create a pseudo element to put in a border just systematically placed around the image
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: 10px;
+                        left: -20px; //top and left indents the border accordingly
+                        height: 100%;
+                        width: 98%;
+                        padding: 0;
+                        border: 3px solid crimson;
+                        border-radius: 10px;
+                        z-index: -2;
+                    }
+                }
+            }
+            .col-right {
+                width: 100%;
+                h2 {
+                    font-size: 2rem;
+                    font-weight: 500;
+                    margin: 10px 0;
+                }
+                p {
+                    margin-bottom: 10px;
+                }
+            }
+            .cta {
+                color: setTextColour(white)
+            }
+        }
+    }
+    //end of about section
 }

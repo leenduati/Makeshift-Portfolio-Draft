@@ -31,7 +31,7 @@
 
 html {
   font-size: 10px;
-  font-family: 'Courier New', Courier, monospace; }
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; }
 
 a {
   text-decoration: none;
@@ -239,6 +239,45 @@ body #projects {
           font-size: 4rem;
           font-weight: 500; }
         body #projects .all-projects .project-items .project-info h2 {
-          font-size: 1rem;
+          font-size: 2rem;
           font-weight: 500;
           margin: 10px 0; }
+
+body #about .about {
+  flex-direction: column-reverse;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 20px; }
+  body #about .about .col-left {
+    width: 250px;
+    height: 300px;
+    padding-top: 30px; }
+    body #about .about .col-left .potrait {
+      position: relative; }
+      body #about .about .col-left .potrait img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 10px; }
+      body #about .about .col-left .potrait::after {
+        content: "";
+        position: absolute;
+        top: 10px;
+        left: -20px;
+        height: 100%;
+        width: 98%;
+        padding: 0;
+        border: 3px solid crimson;
+        border-radius: 10px;
+        z-index: -2; }
+  body #about .about .col-right {
+    width: 100%; }
+    body #about .about .col-right h2 {
+      font-size: 2rem;
+      font-weight: 500;
+      margin: 10px 0; }
+    body #about .about .col-right p {
+      margin-bottom: 10px; }
+  body #about .about .cta {
+    color: #000; }
