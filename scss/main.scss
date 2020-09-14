@@ -1,4 +1,5 @@
 @import "config";
+//import your own fonts from google fonts for better suiting this pactice to your own design
 $primary_color: rgb(97, 17, 97);
 $text-color: white;
 * {
@@ -20,6 +21,11 @@ a {
 }
 
 body {
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
     .container {
         //the code below centers a div in the centre of the page
         min-height: 100vh;
@@ -28,37 +34,6 @@ body {
         align-items: center;
         align-items: center;
         justify-content: center;
-        h1 {
-            color: transparent;
-            display: block;
-            width: fit-content;
-            position: relative;
-            font-size: 4rem;
-            animation: textReveal 2s ease-in-out forwards; //this makes it stay like that going forward
-            &:nth-child(1) {
-                animation-delay: 1s;
-            } //this is useful in showing the animation delay in stages
-            &:nth-child(2) {
-                animation-delay: 2s;
-            }
-            &:nth-child(3) {
-                animation: userNameChange 1s ease-in forwards;
-                animation-delay: 3s;
-            }
-            span {
-                position: absolute;
-                top: 0;
-                left: 0;
-                height: 100%;
-                width: 0%;
-                background-color: crimson;
-                animation: nameFlowChange 3s ease-in-out;
-                animation-delay: 1s;
-                #name {
-                    color: crimson;
-                }
-            }
-        }
         //this styles the button. we have included a transition property at the end to change background & colour on hover
         .cta {
             display: inline-block;
@@ -102,7 +77,137 @@ body {
             padding: 0px 50px;
             margin: 0 auto;
             justify-content: flex-start;
-        } //this uts the class element on the left
-        //hello world section end style
+            //this puts the class element on the left
+            #intro {
+                h1 {
+                    color: transparent;
+                    display: block;
+                    width: fit-content;
+                    position: relative;
+                    font-size: 4rem;
+                    animation: textReveal 2s ease-in-out forwards; //this makes it stay like that going forward
+                    &:nth-child(1) {
+                        animation-delay: 0.5s;
+                    }
+                    //this is useful in showing the animation delay in stages
+                    &:nth-child(2) {
+                        animation-delay: 2s;
+                    }
+                    &:nth-child(3) {
+                        animation: userNameChange 2s ease-in forwards;
+                        animation-delay: 3s;
+                    }
+                    span {
+                        //for the span we have put it to have a width of zero before start of animation then to 100%
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        height: 100%;
+                        width: 0%;
+                        background-color: crimson;
+                        animation: nameFlowChange 3s ease-in-out;
+                        animation-delay: 1s;
+                        #name {
+                            color: crimson;
+                        }
+                    }
+                }
+            }
+        }
+        //hello world section end style 
+        //services section
+        #services {
+            padding: 100px 0; //create space between top and bottom sections
+            .service {
+                flex-direction: column;
+                //flex-direction puts the tems in the flex container as a column
+                text-align: center;
+                max-width: 1500px;
+                margin: 0 auto;
+                padding: 10px 0;
+                .title {
+                    //this is the services title
+                    font-size: 4rem;
+                    font-weight: 300;
+                    color: setTextColour($text-color);
+                    margin-bottom: 10px;
+                    text-transform: uppercase;
+                    letter-spacing: .2rem;
+                    text-align: center;
+                    position: relative;
+                    span {
+                        //same span that we used in the intro
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        height: 100%;
+                        width: 0%;
+                        background-color: crimson;
+                        animation: nameFlowChange 3s ease-in-out;
+                        animation-delay: 1s;
+                    }
+                }
+                &.top {
+                    font-size: 1.4rem;
+                    margin-top: 2rem;
+                    font-weight: 300;
+                    letter-spacing: 0.05rem;
+                }
+                &.bottom {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    .service-item {
+                        flex-basis: 80%;
+                        //The flex-basis CSS property sets the initial main size of a flex item. It sets the size of the content box unless otherwise set with box-sizing .
+                        display: flex;
+                        align-items: flex-start;
+                        justify-content: center;
+                        flex-direction: column;
+                        //the items will be displayed as columns
+                        padding: 30px;
+                        border-radius: 10px;
+                        background-image: url("../Images/background.jpg");
+                        background-size: cover;
+                        margin: 10px 5%;
+                        position: relative;
+                        z-index: 4;
+                        overflow: hidden;
+                        //The overflow property specifies whether to clip the content or to add scrollbars when the content of an element is too big to fit in the specified area.
+                        //create an overlay; this is done by creating an after pseudo element.
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            height: 100%;
+                            width: 100%;
+                            background-color: black;
+                            ;
+                            left: 0%;
+                            opacity: 0.89;
+                            z-index: -4;
+                        }
+                        .icon {
+                            height: 50px;
+                            width: 50px;
+                            object-fit: cover;
+                        }
+                        h2 {
+                            color: white;
+                            margin-bottom: 10px;
+                            padding-bottom: 5px;
+                            text-transform: uppercase;
+                        }
+                        p {
+                            color: white;
+                            text-align: left;
+                            font-size: 1.4rem;
+                            line-height: 1.9rem;
+                        }
+                    }
+                }
+            }
+        }
+        //end of services section
     }
 }

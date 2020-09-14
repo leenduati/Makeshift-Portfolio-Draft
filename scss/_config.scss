@@ -30,3 +30,15 @@
         color: crimson;
     }
 }
+
+//set text colour
+@function setTextColour($color) {
+    @if (lightness($color) > 40) {
+        @return #000;
+    }
+    @else {
+        @return #fff;
+    }
+}
+
+// the function above changes the color when background color's lightness is greater than 40
