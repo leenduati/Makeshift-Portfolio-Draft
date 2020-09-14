@@ -47,15 +47,9 @@ body .title {
   letter-spacing: .2rem;
   text-align: center;
   position: relative; }
-  body .title span {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 0%;
-    background-color: crimson;
-    animation: nameFlowChange 3s ease-in-out;
-    animation-delay: 1s; }
+
+body .name {
+  color: crimson; }
 
 body img {
   height: 100%;
@@ -66,6 +60,11 @@ body .icon {
   height: 50px;
   width: 50px;
   object-fit: cover; }
+
+body .brand h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: white; }
 
 body .container {
   min-height: 100vh;
@@ -134,7 +133,7 @@ body #hello {
         background-color: crimson;
         animation: nameFlowChange 3s ease-in-out;
         animation-delay: 1s; }
-        body #hello .hello #intro h1 span #name {
+        body #hello .hello #intro h1 span .name {
           color: crimson; }
 
 body #services {
@@ -291,7 +290,8 @@ body #about .about {
 
 body .contact {
   flex-direction: column;
-  padding: 100px 0; }
+  padding: 100px 0;
+  height: 831px; }
   body .contact .contact-items {
     max-width: 1200px; }
     body .contact .contact-items .contact-item {
@@ -315,3 +315,33 @@ body .contact {
       body .contact .contact-items .contact-item:hover {
         animation: hoverImage 1s ease-in-out forwards;
         background-color: lightpink; }
+
+body #footer {
+  background-color: #020d0f; }
+  body #footer .footer {
+    min-height: 200px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 50px 0 10px;
+    align-items: center;
+    justify-content: center;
+    text-align: center; }
+    body #footer .footer h2 {
+      font-size: 2rem;
+      font-weight: 500;
+      margin: 10px 0;
+      color: white; }
+    body #footer .footer .social-icons {
+      display: flex;
+      padding-left: 20px; }
+      body #footer .footer .social-icons .icons-items {
+        width: 50px;
+        height: 5opx;
+        padding: 5px; }
+        body #footer .footer .social-icons .icons-items img {
+          filter: grayscale(1); }
+          body #footer .footer .social-icons .icons-items img:hover {
+            animation: hoverImage 1s ease-out forwards;
+            filter: grayscale(0); }
+    body #footer .footer p {
+      color: white; }

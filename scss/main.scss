@@ -33,17 +33,9 @@ body {
         letter-spacing: .2rem;
         text-align: center;
         position: relative;
-        span {
-            //same span that we used in the intro
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 0%;
-            background-color: crimson;
-            animation: nameFlowChange 3s ease-in-out;
-            animation-delay: 1s;
-        }
+    }
+    .name {
+        color: crimson;
     }
     img {
         height: 100%;
@@ -54,6 +46,11 @@ body {
         height: 50px;
         width: 50px;
         object-fit: cover;
+    }
+    .brand h1 {
+        font-size: 3rem;
+        text-transform: uppercase;
+        color: white;
     }
     .container {
         //the code below centers a div in the centre of the page
@@ -137,7 +134,7 @@ body {
                         background-color: crimson;
                         animation: nameFlowChange 3s ease-in-out;
                         animation-delay: 1s;
-                        #name {
+                        .name {
                             color: crimson;
                         }
                     }
@@ -345,6 +342,7 @@ body {
     .contact {
         flex-direction: column; //the flex direction will be a column
         padding: 100px 0;
+        height: 831px;
         .contact-items {
             max-width: 1200px; //this is the max-width
             .contact-item {
@@ -375,4 +373,44 @@ body {
         }
     }
     //end of contact section
+    // start of footer
+    #footer {
+        background-color: rgb(2, 13, 15);
+        .footer {
+            min-height: 200px;
+            flex-direction: column;
+            flex-wrap: wrap;
+            padding: 50px 0 10px;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            h2 {
+                font-size: 2rem;
+                font-weight: 500;
+                margin: 10px 0;
+                color: white;
+            }
+            .social-icons {
+                display: flex;
+                padding-left: 20px;
+                .icons-items {
+                    width: 50px;
+                    height: 5opx;
+                    padding: 5px;
+                    img {
+                        filter: grayscale(1); //sets the icons to black n white
+                        &:hover {
+                            animation: hoverImage 1s ease-out forwards;
+                            filter: grayscale(0);
+                            //added a hover effect to change color from greyscale to color-filled
+                        }
+                    }
+                }
+            }
+            p {
+                color: white;
+            }
+        }
+    }
+    // end of footer
 }
