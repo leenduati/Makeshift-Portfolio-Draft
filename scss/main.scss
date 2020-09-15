@@ -165,9 +165,10 @@ body {
                 justify-content: center;
                 flex-wrap: wrap;
                 .service-item {
-                    flex-basis: 80%;
                     //The flex-basis CSS property sets the initial main size of a flex item. It sets the size of the content box unless otherwise set with box-sizing .
                     display: flex;
+                    flex-basis: 80%;
+                    min-width: 80%;
                     align-items: flex-start;
                     justify-content: center;
                     flex-direction: column;
@@ -413,4 +414,7 @@ body {
         }
     }
     // end of footer
+    //linking the sheet to the media queries
 }
+
+@import "mobi";

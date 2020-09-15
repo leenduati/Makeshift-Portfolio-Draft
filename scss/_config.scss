@@ -51,3 +51,22 @@
         transform: scale(1.1, 1.1);
     }
 }
+
+//media queries. These makes our site responsive on tablets, fullscreen and mobile versions
+//media query for tablets
+//start of tablet media query
+@mixin tablet {
+    @media only screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+//end of tablet media query
+//media query for desktops
+@mixin desktop {
+    @media only screen and (min-width: 1200px) {
+        @content;
+    }
+}
+
+//end of media query for desktops

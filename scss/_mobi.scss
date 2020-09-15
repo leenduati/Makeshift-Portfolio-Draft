@@ -1,0 +1,146 @@
+//media queries. These makes our site responsive on tablets, fullscreen and mobile versions
+//i have included the !important expression to override the css in the main.css page.
+//media query for tablets
+@include tablet {
+    .cta {
+        font-size: 4rem !important;
+        padding: 10px 60px !important;
+    }
+    .title {
+        font-size: 5rem !important;
+    }
+    #intro h1 {
+        font-size: 7rem !important;
+    }
+    #services {
+        .bottom {
+            display: grid !important;
+            grid-template-columns: auto auto !important;
+            padding: 10px !important;
+            .service-item {
+                padding: 20px !important;
+                //font-size: 30px !important;
+                text-align: center !important;
+            }
+        }
+    }
+    #projects {
+        .all-projects {
+            margin: 10px;
+            padding: 10px;
+        }
+        .project-items {
+            flex-direction: row !important;
+            height: 400px !important;
+            margin: 0 !important;
+            width: 100% !important;
+            border-radius: 0 !important;
+            &:nth-of-type(1) {
+                border-top-left-radius: 10px !important;
+                border-top-right-radius: 10px !important;
+            }
+            &:nth-last-child(1) {
+                border-bottom-left-radius: 10px !important;
+                border-bottom-right-radius: 10px !important;
+            }
+            &:nth-child(even) {
+                flex-direction: row-reverse !important;
+            }
+        }
+        .project-info {
+            height: 100% !important;
+            text-align: left !important;
+            justify-content: flex-start !important;
+        }
+    }
+    .project-image {
+        height: 400px !important;
+    }
+    #about {
+        padding-bottom: 0 !important;
+        .about {
+            flex-direction: row !important;
+            justify-content: space-around !important;
+            object-fit: cover !important;
+            .col-left {
+                padding: 10px !important;
+                margin: 10px !important;
+                width: 400px !important;
+                height: 400px !important;
+                .potrait {
+                    &::after {
+                        content: "";
+                        position: absolute !important;
+                        top: 20px !important;
+                        left: -20px !important; //top and left indents the border accordingly
+                        height: 100% !important;
+                        width: 90% !important;
+                        padding: 0 !important;
+                        border: 3px solid crimson !important;
+                        border-radius: 10px !important;
+                        z-index: -2 !important;
+                    }
+                }
+            }
+            .col-right,
+            h1 {
+                text-align: left !important;
+            }
+        }
+    }
+    #contact {
+        padding: 0 !important;
+        margin: 0 !important;
+        .contact {
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            justify-content: start !important;
+            min-width: 20vh !important;
+            padding: 0 !important;
+            margin-top: 0 !important;
+            height: auto !important;
+            h1 {
+                padding: 10px !important;
+                margin: 10px !important;
+            }
+            .contact-items {
+                display: flex !important;
+                flex-direction: row !important;
+                .contact-item {
+                    margin: 10px !important;
+                    flex-direction: row !important;
+                    icon {
+                        height: 80px !important;
+                        width: 80px !important;
+                        img {
+                            object-fit: contain !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//end of media query for tablets
+//media query for desktops
+@include desktop {
+    #services {
+        .bottom {
+            display: grid !important;
+            grid-template-columns: auto auto auto auto !important;
+            padding: 10px !important;
+            .service-item {
+                padding: 20px !important;
+                //font-size: 30px !important;
+                text-align: center !important;
+            }
+        }
+    }
+    .top {
+        max-width: 500px !important;
+    }
+}
+
+//end of media query for desktops
