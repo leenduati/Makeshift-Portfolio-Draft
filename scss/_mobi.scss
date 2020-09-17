@@ -141,6 +141,27 @@
     .top {
         max-width: 500px !important;
     }
+    #header {
+        position: sticky;
+    }
+    .nav-list {
+        ul {
+            position: initial !important;
+            display: block !important;
+            width: 100% !important;
+            height: auto !important;
+            background-color: transparent !important;
+            li {
+                display: inline-block;
+                a {
+                    font-size: 2rem !important;
+                }
+            }
+        }
+        .hamburger {
+            display: none !important;
+        }
+    }
 }
 
 //end of media query for desktops

@@ -31,6 +31,18 @@
     }
 }
 
+//this keyframe will make the menu draw button flash continuously
+@keyframes drawMenu {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: scale(1.5);
+    }
+}
+
 //set text colour
 @function setTextColour($color) {
     @if (lightness($color) > 40) {
