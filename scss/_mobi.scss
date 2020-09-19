@@ -4,7 +4,7 @@
 @include tablet {
     html {
         width: auto !important;
-        overflow-x: hidden;
+        overflow-x: hidden; //remove the overflow in tablet form
     }
     #hello {
         background-size: cover;
@@ -21,8 +21,8 @@
     }
     #services {
         .bottom {
-            display: grid !important;
-            grid-template-columns: auto auto !important;
+            display: grid !important; //displays the Services panel in grid form in tablet
+            grid-template-columns: auto auto !important; //it will have two columns
             padding: 10px !important;
             .service-item {
                 padding: 20px !important;
@@ -43,6 +43,7 @@
             width: 100% !important;
             border-radius: 0 !important;
             &:nth-of-type(1) {
+                //border radius added to get the 1st child element
                 border-top-left-radius: 10px !important;
                 border-top-right-radius: 10px !important;
             }
@@ -51,7 +52,7 @@
                 border-bottom-right-radius: 10px !important;
             }
             &:nth-child(even) {
-                flex-direction: row-reverse !important;
+                flex-direction: row-reverse !important; //for all even children, swap the image and text
             }
         }
         .project-info {
