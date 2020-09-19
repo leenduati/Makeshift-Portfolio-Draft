@@ -21,3 +21,7 @@ use "npm run sass" to run the sass
 
 create a .gitignore and add node-modules there so as not to commit the node modules folder to git
 
+to deploy the page add homepage in the package.json eg. "homepage": "https://leenduati.github.io/makeshiftPortfolio",
+
+and then deploy under the scripts eg. 
+"deploy": "gh-pages -d dist"
