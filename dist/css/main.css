@@ -39,7 +39,8 @@
 
 html {
   font-size: 10px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; }
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  scroll-behavior: smooth; }
 
 a {
   text-decoration: none;
@@ -52,7 +53,9 @@ body #header {
   left: 0;
   top: 0;
   width: 100vw;
-  height: auto; }
+  height: auto;
+  transition: 2s ease-in-out;
+  transition-property: background-color; }
   body #header .header {
     min-height: 8vh;
     background-color: #020d0f; }
@@ -403,9 +406,10 @@ body #about .about {
 body .contact {
   flex-direction: column;
   padding: 100px 0;
-  height: 831px; }
+  height: fit-content;
+  margin-top: 20px; }
   body .contact .contact-items {
-    max-width: 1200px; }
+    max-width: fit-content; }
     body .contact .contact-items .contact-item {
       display: flex;
       flex-direction: column;
@@ -413,9 +417,7 @@ body .contact {
       justify-content: center;
       box-shadow: 5px 10px #162427;
       border-radius: 10px;
-      margin-bottom: 20px;
-      padding: 10px;
-      width: 50vh;
+      margin-bottom: 0px;
       text-align: center; }
       body .contact .contact-items .contact-item h1 {
         font-size: 4rem;
@@ -459,6 +461,11 @@ body #footer {
       color: white; }
 
 @media only screen and (min-width: 768px) {
+  html {
+    width: auto !important;
+    overflow-x: hidden; }
+  #hello {
+    background-size: cover; }
   .cta {
     font-size: 4rem !important;
     padding: 10px 60px !important; }
@@ -530,7 +537,6 @@ body #footer {
       align-items: center !important;
       justify-content: start !important;
       min-width: 20vh !important;
-      padding: 0 !important;
       margin-top: 0 !important;
       height: auto !important; }
       #contact .contact h1 {
@@ -570,5 +576,7 @@ body #footer {
       display: inline-block; }
       .nav-list ul li a {
         font-size: 2rem !important; }
+        .nav-list ul li a::after {
+          display: none !important; }
   .nav-list .hamburger {
     display: none !important; } }

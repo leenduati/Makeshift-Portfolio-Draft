@@ -2,6 +2,13 @@
 //i have included the !important expression to override the css in the main.css page.
 //media query for tablets
 @include tablet {
+    html {
+        width: auto !important;
+        overflow-x: hidden;
+    }
+    #hello {
+        background-size: cover;
+    }
     .cta {
         font-size: 4rem !important;
         padding: 10px 60px !important;
@@ -97,7 +104,7 @@
             align-items: center !important;
             justify-content: start !important;
             min-width: 20vh !important;
-            padding: 0 !important;
+            //padding: 0 !important;
             margin-top: 0 !important;
             height: auto !important;
             h1 {
@@ -155,6 +162,9 @@
                 display: inline-block;
                 a {
                     font-size: 2rem !important;
+                    &::after {
+                        display: none !important;
+                    }
                 }
             }
         }

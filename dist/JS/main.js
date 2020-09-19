@@ -1,7 +1,7 @@
  const HAMBURGER = document.querySelector(".hamburger");
  const MOBILEMENU = document.querySelector(".nav-list ul");
  const HEADER = document.querySelector(".header");
- const UL = document.getElementById("ul")
+ const UL = document.querySelectorAll(".nav-list ul li a")
 
  HAMBURGER.addEventListener("click", function() {
      HAMBURGER.classList.toggle("active");
@@ -24,3 +24,10 @@
          HEADER.style.backgroundColor = "transparent";
      }
  });
+
+ UL.forEach(item => {
+     item.addEventListener("click", function() {
+         HAMBURGER.classList.toggle("active");
+         MOBILEMENU.classList.toggle("active");
+     })
+ })
