@@ -418,6 +418,7 @@ body .contact {
       box-shadow: 5px 10px #162427;
       border-radius: 10px;
       margin-bottom: 0px;
+      padding-bottom: 10px;
       text-align: center; }
       body .contact .contact-items .contact-item h1 {
         font-size: 4rem;
@@ -449,9 +450,10 @@ body #footer {
       display: flex;
       padding-left: 20px; }
       body #footer .footer .social-icons .icons-items {
-        width: 50px;
+         width: 50px;
         height: 50px;
-        padding: 5px; }
+         object-fit: cover;
+         padding-bottom: 10px; }
         body #footer .footer .social-icons .icons-items img {
           filter: grayscale(1);
           width: 50px;
