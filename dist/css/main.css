@@ -455,7 +455,8 @@ body #footer {
         body #footer .footer .social-icons .icons-items img {
           filter: grayscale(1);
           width: 50px;
-          height: 20px; }
+          height: 20px;
+object-fit: cover;}
           body #footer .footer .social-icons .icons-items img:hover {
             animation: hoverImage 1s ease-out forwards;
             filter: grayscale(0); }
